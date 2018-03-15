@@ -1,3 +1,3 @@
 test_script:
-  - (cd Testing/dasher_tests; make)
-  - ./Testing/dasher_tests/run_tests.sh
+  - cmd: (cd Testing/dasher_tests; make)
+  - cmd: ./Testing/dasher_tests/run_tests.sh
