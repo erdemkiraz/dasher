@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/hpvrm5230qlay15m?svg=true)](https://ci.appveyor.com/project/erdemkiraz/dasher)
+
 Dasher Version 4.11
 -------------------
 Dasher is a zooming predictive text entry system, designed for situations
