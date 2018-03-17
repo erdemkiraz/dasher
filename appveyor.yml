@@ -5,6 +5,7 @@ environment:
 
 install:
   - cmd: choco install gtk-runtime -y
+  - cmd: refreshenv
 
 build:
   project: Src\Win32\Dasher.sln
