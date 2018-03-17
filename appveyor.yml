@@ -1,7 +1,7 @@
-image: Visual Studio 2013
+image: Visual Studio 2015
 
 environment:
-  VisualStudioVersion: 13.0
+  VisualStudioVersion: 15.0
 
 install:
   - cmd: choco install gtk-runtime
