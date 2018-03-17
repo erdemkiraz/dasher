@@ -1,10 +1,10 @@
-image: Visual Studio 2015
+image: Visual Studio 2017
 
 environment:
   VisualStudioVersion: 15.0
 
 install:
-  - cmd: choco install gtk-runtime
+  - cmd: choco install gtk-runtime -y
 
 build:
   project: Src\Win32\Dasher.sln
