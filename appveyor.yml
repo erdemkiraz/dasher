@@ -1,14 +1,19 @@
 image: Visual Studio 2017
 
 environment:
-  VisualStudioVersion: 15.0
+  VisualStudioVersion: 15.6
 
 install:
   - cmd: choco install gtk-runtime -y
   - cmd: refreshenv
   - cmd: choco install nuget.commandline
   - cmd: nuget install expat
+
+configuration: debug
 #- cmd: set EXPAT C:\Program Files (x86)\Expat 2.2.5
+#set PATH=%PATH%;%EXPAT%
+#SETX PATH "%PATH%"
+
 
 
 build:
