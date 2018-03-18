@@ -45,17 +45,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\Target/Debug\</OutDir>
     <IntDir>.\Target/Debug/Intermediate\</IntDir>
-    <IncludePath>$(EXPAT)\Source\lib;$(IncludePath)</IncludePath>
+    <IncludePath>$(EXPAT)\lib;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Target/Release\</OutDir>
     <IntDir>.\Target/Release/Intermediate\</IntDir>
-    <IncludePath>$(EXPAT)\Source\lib;$(IncludePath)</IncludePath>
+    <IncludePath>$(EXPAT)\lib;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>Common;.;$(TABLETSDK)\Include;$(EXPAT)\Source\lib;$(MICROSOFTSDK5)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Common;.;$(TABLETSDK)\Include;$(EXPAT)\lib;$(MICROSOFTSDK5)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;WIN32_SPEECH;_DEBUG;DEBUG;_WINDOWS;_STATIC;_WIN32_WINNT=0x0500;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -73,7 +73,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>Common;.;$(TABLETSDK)\Include;$(EXPAT)\Source\lib;$(MICROSOFTSDK5)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Common;.;$(TABLETSDK)\Include;$(EXPAT)\lib;$(MICROSOFTSDK5)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;WIN32_SPEECH;_WINDOWS;_UNICODE;_STATIC;_WIN32_WINNT=0x0500WIN32;_WIN32_WINNT=0x0500;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
