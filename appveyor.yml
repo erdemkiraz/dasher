@@ -1,7 +1,7 @@
 image: Visual Studio 2017
 
 environment:
-  VisualStudioVersion: 15.6
+  VisualStudioVersion: 15.0
 
 install:
   - cmd: choco install gtk-runtime -y
@@ -9,12 +9,5 @@ install:
   - cmd: choco install nuget.commandline
   - cmd: nuget install expat
 
-configuration: Release
-#- cmd: set EXPAT C:\Program Files (x86)\Expat 2.2.5
-#set PATH=%PATH%;%EXPAT%
-#SETX PATH "%PATH%"
-
-
-
 build:
-  project: Src\Win32\Dasher.sln
+  project: Src\Win32\Dasher-no-manual.sln
