@@ -6,6 +6,10 @@ environment:
 install:
   - cmd: choco install gtk-runtime -y
   - cmd: refreshenv
+  - cmd: choco install nuget.commandline
+  - cmd: nuget install expat
+#- cmd: set EXPAT C:\Program Files (x86)\Expat 2.2.5
+
 
 build:
   project: Src\Win32\Dasher.sln
