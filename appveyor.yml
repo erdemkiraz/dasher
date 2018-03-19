@@ -8,9 +8,9 @@ install:
 #  - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-win32bin-2.2.5.exe --output-document=C:\expat.exe
 #  - cmd: C:\expat.exe
   - cmd: vcpkg install expat:x86-windows
-  - cmd: set EXPAT="C:/Tools/vcpkg/packages/expat_x86-windows"
+  - cmd: set EXPAT="C:/Tools/vcpkg/packages/expat_x86-windows/share/expat"
   - cmd: echo %EXPAT%
-  - cmd: cd "C:/Tools/vcpkg/packages/expat_x86-windows"
+  - cmd: cd "C:/Tools/vcpkg/packages/expat_x86-windows/share/expat"
   - cmd: dir
   
 build:
