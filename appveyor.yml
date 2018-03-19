@@ -16,4 +16,7 @@ environment:
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
   
 build:
-  project: Src\Win32\Dasher.sln
+  project: Src\Win32\Dasher-no-manual.sln
+
+after_build:
+  cmd: exit 0
