@@ -1,17 +1,18 @@
-image: Visual Studio 2017
+ configuration: Debug
 
 environment:
-  VisualStudioVersion: 15.0
+   EXPAT: "C:\Program Files (x86)\Expat 2.2.5"
+   matrix:
+     - GENERATOR: Visual Studio 15 2017
+       PLATFORM: Win32
+       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
 install:
   - cmd: choco install wget
   - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-win32bin-2.2.5.exe --output-document=C:\expat.exe
   - cmd: C:\expat.exe /silent
-  - cmd: set EXPAT="C:\Program Files (x86)\Expat 2.2.5"
-  - cmd: SETX EXPAT "C:\Program Files (x86)\Expat 2.2.5"
   - cmd: echo %EXPAT%
   - cmd: cd %EXPAT%
-  - cmd: cd Source\lib
   - cmd: dir
   
 build:
