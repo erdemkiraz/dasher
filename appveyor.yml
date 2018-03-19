@@ -17,6 +17,7 @@ environment:
   
 build:
   project: Src\Win32\Dasher-no-manual.sln
+  verbosity: quiet
 
 after_build:
   cmd: exit 0
