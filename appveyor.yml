@@ -19,5 +19,5 @@ build:
   project: Src\Win32\Dasher-no-manual.sln
   verbosity: quiet
 
-after_finish:
+on_finish:
   cmd: exit 0
