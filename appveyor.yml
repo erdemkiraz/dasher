@@ -9,8 +9,6 @@ install:
 #  - cmd: C:\expat.exe
   - cmd: vcpkg install expat:x86-windows
   - cmd: vcpkg install expat:x64-windows
-  - cmd: set EXPAT="C:\Program Files (x86)\Expat 2.2.5"
-  - cmd: setx EXPAT "C:\Program Files (x86)\Expat 2.2.5"
   
 build:
   project: Src\Win32\Dasher-no-manual.sln
