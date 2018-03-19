@@ -9,7 +9,7 @@ install:
 configuration: Debug
 
 environment:
-  EXPAT: 'C:\Program Files (x86)\Expat 2.2.5'
+  expat: 'C:\Program Files (x86)\Expat 2.2.5'
   matrix:
     - GENERATOR: Visual Studio 15 2017
       PLATFORM: Win32
