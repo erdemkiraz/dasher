@@ -8,7 +8,7 @@ install:
   - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-2.2.5.tar.bz2 --output-document=expat.tar.bz2
   - cmd: 7z x expat.tar.bz2 -y
   - cmd: 7z x expat.tar -y -o"C:\Program Files (x86)"
-  - cmd: set EXPAT="C:\Program Files (x86)\expat 2.2.5"
+  - cmd: set EXPAT="C:\Program Files (x86)\expat-2.2.5"
 
 build:
   project: Src\Win32\Dasher-no-manual.sln
