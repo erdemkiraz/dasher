@@ -20,5 +20,5 @@ build:
   verbosity: quiet
 
 after_build:
-  cmd: if exist Src\Win32\Target\Debug\Dasher.exe exit 0
-  cmd: if not exist Src\Win32\Target\Debug\Dasher.exe exit 1 
+  - cmd: if exist Src\Win32\Target\Debug\Dasher.exe exit 0
+  - cmd: if not exist Src\Win32\Target\Debug\Dasher.exe exit 1 
