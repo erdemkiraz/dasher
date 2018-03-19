@@ -10,8 +10,17 @@ install:
   - cmd: vcpkg install expat:x86-windows
   - cmd: set EXPAT="C:/Tools/vcpkg/packages/expat_x86-windows/share/expat"
   - cmd: echo %EXPAT%
+  - cmd: cd "C:/Tools/vcpkg/installed/x86-windows"
+  - cmd: dir
+  - cmd: cd "C:/Tools/vcpkg/packages/expat_x86-windows"
+  - cmd: dir
+  - cmd: cd "C:/Tools/vcpkg/buildtrees/expat"
+  - cmd: dir
+  - cmd: cd "C:/Tools/vcpkg/ports/expat"
+  - cmd: dir
   - cmd: cd "C:/Tools/vcpkg/packages/expat_x86-windows/share/expat"
   - cmd: dir
+
   
 build:
   project: Src\Win32\Dasher-no-manual.sln
