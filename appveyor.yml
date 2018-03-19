@@ -4,10 +4,14 @@ environment:
   VisualStudioVersion: 15.0
 
 install:
-  - cmd: choco install gtk-runtime -y
-  - cmd: refreshenv
-  - cmd: choco install nuget.commandline
-  - cmd: nuget install expat
-
+  - cmd: choco install wget
+  - cmd: wget https://sourceforge.net/projects/expat/?source=typ_redirect --output-document=C:\expat.exe
+  - cmd: C:\expat.exe
+  - cmd: set EXPAT="C:\Program Files\Expat 2.2.5"
+  - cmd: setx EXPAT "C:\Program Files\Expat 2.2.5"
+  
 build:
   project: Src\Win32\Dasher-no-manual.sln
+
+on_failure:
+  - cmd: echo %EXPAT%
