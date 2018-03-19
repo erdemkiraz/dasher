@@ -5,13 +5,8 @@ install:
   - cmd: echo %EXPAT%
   - cmd: cd %EXPAT%
   - cmd: dir
-  - cmd: exit 1
 
 configuration: Debug
-
-matrix:
-  allow_failures:
-    - configuration: Debug
 
 environment:
   expat: 'C:\Program Files (x86)\Expat 2.2.5'
@@ -22,7 +17,7 @@ environment:
   
 build:
   project: Src\Win32\Dasher-no-manual.sln
-  verbosity: quiet
+  verbosity: Diagnostic
 
 after_build:
   - cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
