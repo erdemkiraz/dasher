@@ -25,5 +25,5 @@ build:
 
 after_build:
   - cmd: appveyor exit
-  #- cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
-  #- cmd: if not exist Src\Win32\Target\Debug\Dasher.exe exit 1 
+  - cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
+  - cmd: if not exist Src\Win32\Target\Debug\Dasher.exe exit 1 
