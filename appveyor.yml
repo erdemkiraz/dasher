@@ -8,10 +8,10 @@ install:
 #  - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-win32bin-2.2.5.exe --output-document=C:\expat.exe
 #  - cmd: C:\expat.exe
   - cmd: vcpkg install expat:x86-windows
-  - cmd: vcpkg install expat:x64-windows
+  - cmd: set EXPAT="C:/Tools/vcpkg/packages/expat_x86-windows"
+  - cmd: echo %EXPAT%
+  - cmd: cd "C:/Tools/vcpkg/packages/expat_x86-windows"
+  - cmd: dir
   
 build:
   project: Src\Win32\Dasher-no-manual.sln
-
-on_failure:
-  - cmd: echo %EXPAT%
