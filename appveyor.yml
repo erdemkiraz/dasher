@@ -5,6 +5,7 @@ install:
   - cmd: echo %EXPAT%
   - cmd: cd %EXPAT%
   - cmd: dir
+  - cmd: exit 0
 
 configuration: Debug
 
