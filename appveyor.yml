@@ -8,9 +8,10 @@ install:
   - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-win32bin-2.2.5.exe --output-document=C:\expat.exe
   - cmd: C:\expat.exe /silent
   - cmd: set EXPAT="C:\Program Files (x86)\Expat 2.2.5"
-  - cmd: setx EXPAT"C:\Program Files (x86)\Expat 2.2.5"
+  - cmd: SETX EXPAT "C:\Program Files (x86)\Expat 2.2.5"
   - cmd: echo %EXPAT%
   - cmd: cd %EXPAT%
+  - cmd: cd Source\lib
   - cmd: dir
   
 build:
