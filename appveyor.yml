@@ -13,3 +13,6 @@ install:
 
 build:
   project: Src\Win32\Dasher-no-manual.sln
+
+on_failure:
+  - cmd: echo %EXPAT%
