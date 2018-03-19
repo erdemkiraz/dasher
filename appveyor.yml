@@ -5,7 +5,7 @@ install:
   - cmd: echo %EXPAT%
   - cmd: cd %EXPAT%
   - cmd: dir
-  - cmd: exit 0
+  - cmd: appveyor exit
 
 configuration: Debug
 
