@@ -16,8 +16,8 @@ environment:
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
   
 build:
-  project: Src\Win32\Dasher-no-manual.sln
-  verbosity: Diagnostic
+  project: Src\Win32\Dashe.sln
+  verbosity: Quiet
 
 after_build:
   - cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
