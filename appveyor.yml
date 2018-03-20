@@ -17,7 +17,7 @@ environment:
   
 build:
   project: Src\Win32\Dasher.sln
-  verbosity: Quited
+  verbosity: Quiet
 
 after_build:
   - cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
