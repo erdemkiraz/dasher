@@ -17,11 +17,9 @@
 				<Directory Id="Dasher" Name="Dasher">
 					<Directory Id="INSTALLDIR" Name="Dasher 5.00">
 						<Component Id="MainExecutable" Guid="5a93ba53-2e2d-4f88-8a1f-5bdd8f130394">
-							<File Id="DasherEXE" Name="Dasher.exe" DiskId="1" Source="..\Win32\Target\Release\Dasher.exe" Vital="yes"/>
 							<File Id="ExpatDLL" Name="libexpat.dll" DiskId="1" Source="$(env.EXPAT)\Bin\libexpat.dll" Vital="yes"/>
 						</Component>
 						<Component Id="Help" Guid="cf486329-8d04-462b-afd4-e8e0bccc9c95">
-							<File Id="HelpFile" Name="Dasher.chm" DiskId="1" Source="..\..\Data\Help\Win32\dasher.chm"/>
 						</Component>
 						<Directory Id="SystemRC" Name="system.rc">
 							<Component Id="Alphabets" Guid="e734711a-0e68-4897-b7a6-7a60a20062b5">
@@ -276,6 +274,5 @@
 		<WixVariable Id="WixUIBannerBmp" Value="Top.bmp"/>
 		<UIRef Id="WixUI_Mondo"/>
 		<UIRef Id="WixUI_ErrorProgressText"/>
-		<Icon Id="Dasher.exe" SourceFile="..\Win32\Target\Release\Dasher.exe"/>
 	</Product>
 </Wix>
