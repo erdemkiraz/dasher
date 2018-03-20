@@ -4,6 +4,7 @@ install:
   - cmd: C:\expat.exe /silent
   - cmd: echo %EXPAT%
   - cmd: msbuild "Src\Win32\Dasher-no-manual.sln"
+  - cmd: appveyor exit
   - cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
   - cmd: if not exist Src\Win32\Target\Debug\Dasher.exe exit 1 
 
