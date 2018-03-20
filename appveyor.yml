@@ -3,7 +3,6 @@ install:
   - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-win32bin-2.2.5.exe --output-document=C:\expat.exe
   - cmd: C:\expat.exe /silent
   - cmd: echo %EXPAT%
-  - cmd: appveyor exit
   - cmd: msbuild "Src\Win32\Dasher-no-manual.sln"
   - cmd: appveyor exit
   - cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
