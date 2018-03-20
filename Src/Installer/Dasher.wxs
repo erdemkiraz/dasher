@@ -267,7 +267,7 @@
       <ComponentRef Id="Colours"/>
       <ComponentRef Id="Control"/>
       <ComponentRef Id="Settings"/>				
-				<ComponentRef Id="Help"/>
+				
 		</Feature>
 		<WixVariable Id="WixUILicenseRtf" Value="License.rtf"/>
 		<WixVariable Id="WixUIDialogBmp" Value="Background.bmp"/>
