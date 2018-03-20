@@ -3,8 +3,9 @@ install:
   - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-win32bin-2.2.5.exe --output-document=C:\expat.exe
   - cmd: C:\expat.exe /silent
   - cmd: echo %EXPAT%
-  - cmd: cd %EXPAT%
-  - cmd: dir
+  - cmd: msbuild "Src\Win32\Dasher-no-manual.sln"
+  - cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
+  - cmd: if not exist Src\Win32\Target\Debug\Dasher.exe exit 1 
 
 configuration: Debug
 
@@ -14,25 +15,3 @@ environment:
     - GENERATOR: Visual Studio 15 2017
       PLATFORM: Win32
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-  
-build:
-  project: Src\Win32\Dasher.sln
-  verbosity: Quiet
-
-after_build:
-  - cmd: echo "WORK1"
-
-before_test:
-  - cmd: echo "WORK2"
-
-after_test:
-  - cmd: echo "WORK3"
-
-before_deploy:
-  - cmd: echo "WORK4"
-
-before_build:
-  - cmd: echo "WORK5"
-
-  #- cmd: if exist Src\Win32\Target\Debug\Dasher.exe appveyor exit
-  #- cmd: if not exist Src\Win32\Target\Debug\Dasher.exe exit 1 
