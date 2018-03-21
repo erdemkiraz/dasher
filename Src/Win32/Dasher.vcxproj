@@ -134,7 +134,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;WS2_32.lib;Htmlhelp.lib;Uxtheme.lib;(%EXPAT%)\Bin\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;WS2_32.lib;Htmlhelp.lib;Uxtheme.lib;%EXPAT%\Bin\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\Target/Release/Dasher.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>$(SPEECHSDK)\Lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
