@@ -6,13 +6,16 @@ install:
   - cmd: if exist Src\Win32\Target\Release\Dasher.exe appveyor exit
   - cmd: if not exist Src\Win32\Target\Release\Dasher.exe exit 1 
 
-configuration: Release
-
 environment:
   expat: 'C:\Program Files (x86)\Expat 2.2.5'
+  DASHERCONFIG: Release
+  GENERATOR: Visual Studio 15 2017
+  PLATFORM: Win32
+  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
   matrix:
-    - GENERATOR: Visual Studio 15 2017
-      PLATFORM: Win32
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    - configuration: Release
+      DASHERCONFIG: Release
+    - configuration: Debug
+      DASHERCONFIG: Debug
 
 build: off
