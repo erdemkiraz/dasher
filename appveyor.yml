@@ -2,9 +2,7 @@ install:
   - cmd: choco install wget
   - cmd: wget https://github.com/libexpat/libexpat/releases/download/R_2_2_5/expat-win32bin-2.2.5.exe --output-document=C:\expat.exe
   - cmd: C:\expat.exe /silent
-  - cmd: echo %DASHERCONFIG%
-  - cmd: echo Src\Win32\Target\%DASHERCONFIG%
-  #- cmd: msbuild "Src\Win32\Dasher.sln"
+  - cmd: msbuild "Src\Win32\Dasher.sln"
   - cmd: if exist Src\Win32\Target\%DASHERCONFIG%\Dasher.exe appveyor exit
   - cmd: if not exist Src\Win32\Target\$%DASHERCONFIG%\Dasher.exe exit 1 
 
